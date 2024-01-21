@@ -33,7 +33,7 @@ CREATE TABLE Dept_Emp (
 CREATE TABLE Dept_Manager (
 	dept_no VARCHAR(4) NOT NULL,
 	emp_no INT NOT NULL,
-	PRIMARY KEY (emp_no),
+	PRIMARY KEY (emp_no,dept_no),
 	FOREIGN KEY (dept_no) REFERENCES Departments (dept_no),
 	FOREIGN KEY (emp_no) REFERENCES Employees (emp_no)
 );
